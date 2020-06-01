@@ -1,4 +1,4 @@
-#[Selene](https://github.com/Kampfkarren/selene) standard library for the [Synapse X](https://x.synapse.to) dynamic Lua extension loading tool
+# [Selene](https://github.com/Kampfkarren/selene) standard library for the [Synapse X](https://x.synapse.to) dynamic Lua extension loading tool
 (Requires the Roblox standard library)
 
 How to use:
