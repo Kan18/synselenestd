@@ -1,0 +1,488 @@
+# Sources:
+# https://synapsexdocs.github.io/custom-lua-functions/environment-helper-functions/
+# personal experience
+# TODO: somehow automatically generate this
+# Also: I couldn't get HttpGet to work due to oddities, this should be fixed
+# You can add other libraries on top of this to add/remove stuff, too
+[selene]
+base = "roblox"
+name = "synapse"
+
+[getgenv]
+args = []
+
+[getrenv]
+args = []
+
+[getreg]
+args = []
+
+[[getgc.args]]
+type = "bool"
+required = false
+
+[getinstances]
+args = []
+
+[getnilinstances]
+args = []
+
+[getscripts]
+args = []
+
+[getloadedmodules]
+args = []
+
+[[getconnections.args]]
+type = { display = "Event" }
+
+[[firesignal.args]]
+type = { display = "Event" }
+
+[[fireclickdetector.args]]
+type = { display = "ClickDetector" }
+
+[[fireclickdetector.args]]
+type = "number"
+required = false
+
+[[firetouchinterest.args]]
+type = { display = "Part" }
+
+[[firetouchinterest.args]]
+type = { display = "TouchTransmitter" }
+
+[[firetouchinterest.args]]
+type = "number" # Is this required?
+required = false
+
+[[getsenv.args]]
+type = "any" # Todo: more strict
+
+[getcallingscript]
+args = []
+
+[[getrawmetatable.args]]
+type = "any" # The real getrawmetatable isn't limited..
+
+[[setrawmetatable.args]]
+type = "any"
+
+[[setrawmetatable.args]]
+type = "table"
+
+[[setreadonly.args]]
+type = "table"
+
+[[setreadonly.args]]
+type = "bool"
+required = "false" # Is this actually required?
+
+[[isreadonly.args]]
+type = "table"
+
+[isrbxactive]
+args = []
+
+[[keypress.args]]
+type = "number"
+
+[[keyrelease.args]]
+type = "number"
+
+[mouse1click]
+args = []
+
+[mouse1press]
+args = []
+
+[mouse1release]
+args = []
+
+[mouse2click]
+args = []
+
+[mouse2press]
+args = []
+
+[mouse2release]
+args = []
+
+[[mousescroll.args]]
+type = "number"
+
+[[mousemoverel.args]]
+type = "number"
+
+[[mousemoveabs.args]]
+type = "number"
+
+[[mousemoveabs.args]]
+type = "number"
+
+[[hookfunction.args]]
+type = "function"
+
+[[hookfunction.args]]
+type = "function"
+
+#Alias for hookfunction
+
+[[hookfunc.args]]
+type = "function"
+
+[[hookfunc.args]]
+type = "function"
+
+[[newcclosure.args]]
+type = "function"
+
+[[loadstring.args]]
+type = "string"
+
+[[loadstring.args]]
+type = "string"
+required = false # Chunk name 
+
+[checkcaller]
+args = []
+
+[[islclosure.args]]
+type = "function"
+
+[[iscclosure.args]]
+type = "function"
+
+[[dumpstring.args]]
+type = "string"
+
+[[decompile.args]]
+type = "..." # I have no idea..
+
+[[rconsoleprint.args]]
+type = "string"
+
+[[rconsoleinfo.args]]
+type = "string"
+
+[[rconsolewarn.args]]
+type = "string"
+
+[[rconsoleerr.args]]
+type = "string"
+
+[rconsoleclear]
+args = []
+
+[[rconsolename.args]]
+type = "string"
+
+[rconsoleinput]
+args = []
+
+[rconsoleinputasync]
+args = []
+
+[[printconsole.args]]
+type = "string"
+
+[[printconsole.args]]
+type = "number"
+
+[[printconsole.args]]
+type = "number"
+
+[[printconsole.args]]
+type = "number"
+
+[[readfile.args]]
+type = "string"
+
+[[writefile.args]]
+type = "string"
+
+[[writefile.args]]
+type = "string"
+
+[[appendfile.args]]
+type = "string"
+
+[[appendfile.args]]
+type = "string"
+
+[[loadfile.args]]
+type = "string"
+
+[[listfiles.args]]
+type = "string"
+
+[[isfile.args]]
+type = "string"
+
+[[isfolder.args]]
+type = "string"
+
+[[makefolder.args]]
+type = "string"
+
+[[delfolder.args]]
+type = "string"
+
+[[delfile.args]]
+type = "string"
+
+
+
+# Internal functions, I've just left the type as "any" for right now 
+[[getstate.args]]
+type = "any"
+
+[[getinstancefromstate.args]]
+type = "any"
+
+[[getpointerfromstate.args]]
+type = "any"
+
+[[getstateenv.args]]
+type = "any"
+
+[[getcallstack.args]]
+type = "any"
+
+# Back to Misc functions
+
+[[setclipboard.args]]
+type = "string"
+
+[[setfflag.args]]
+type = "string"
+
+[[setfflag.args]]
+type = "string" 
+
+[getnamecallmethod]
+args = []
+
+[[setnamecallmethod.args]]
+type = "string"
+
+[isluau]
+args = []
+
+# Skipped over setnonreplicatedproperty due to brokenness
+
+[[getspecialinfo.args]]
+type = { display = "Instance" }
+
+[[saveinstance.args]]
+type = "table"
+
+[[messagebox.args]]
+type = "string"
+
+[[messagebox.args]]
+type = "string"
+
+[[messagebox.args]]
+type = "number"
+
+# Bit library: just use bit32 pls, thx
+
+# Syn Crypt library
+[[syn.crypt.encrypt.args]]
+type = "string"
+
+[[syn.crypt.encrypt.args]]
+type = "string"
+
+[[syn.crypt.decrypt.args]]
+type = "string"
+
+[[syn.crypt.decrypt.args]]
+type = "string"
+
+[[syn.crypt.base64.encode.args]]
+type = "string"
+
+[[syn.crypt.base64.decode.args]]
+type = "string"
+
+[[syn.crypt.hash.args]]
+type = "string"
+
+[[syn.crypt.derive.args]]
+type = "string"
+
+[[syn.crypt.derive.args]]
+type = "number"
+
+[[syn.crypt.random.args]]
+type = "number"
+
+[[syn.crypt.custom.encrypt.args]]
+type = ["aes-cbc", "aes-cfb", "aes-ctr", "aes-ofb", "aes-gcm", "aes-eax", "bf-cbc", "bf-cfb", "bf-ofb"]
+
+[[syn.crypt.custom.encrypt.args]]
+type = "string"
+
+[[syn.crypt.custom.encrypt.args]]
+type = "string"
+
+[[syn.crypt.custom.encrypt.args]]
+type = "string"
+
+[[syn.crypt.custom.decrypt.args]]
+type = ["aes-cbc", "aes-cfb", "aes-ctr", "aes-ofb", "aes-gcm", "aes-eax", "bf-cbc", "bf-cfb", "bf-ofb"]
+
+[[syn.crypt.custom.decrypt.args]]
+type = "string"
+
+[[syn.crypt.custom.decrypt.args]]
+type = "string"
+
+[[syn.crypt.custom.decrypt.args]]
+type = "string"
+
+[[syn.crypt.custom.hash.args]]
+# Whatever you do, don't use md5 or sha1
+type = ["md5", "sha1", "sha224", "sha256", "sha384", "sha512", "sha3-256", "sha3-384", "sha3-512"]
+
+[[syn.crypt.custom.hash.args]]
+type = "string"
+
+[[debug.getconstants.args]]
+type = "any" # function or number
+
+[[debug.getconstant.args]]
+type = "any"
+
+[[debug.getconstant.args]]
+type = "number"
+
+[[debug.setconstant.args]]
+type = "any"
+
+[[debug.setconstant.args]]
+type = "string"
+
+[[debug.setconstant.args]]
+type = "any"
+
+[[debug.getupvalues.args]]
+type = "any" # function or number
+
+[[debug.getupvalue.args]]
+type = "any"
+
+[[debug.getupvalue.args]]
+type = "number"
+
+[[debug.setupvalue.args]]
+type = "any"
+
+[[debug.setupvalue.args]]
+type = "number"
+
+[[debug.setupvalue.args]]
+type = "any"
+
+[[debug.getprotos.args]]
+type = "function"
+
+[[debug.getproto.args]]
+type = "any"
+
+[[debug.getproto.args]]
+type = "number"
+
+[[debug.setproto.args]]
+type = "function"
+
+[[debug.setupvalue.args]]
+type = "number"
+
+[[debug.setupvalue.args]]
+type = "function"
+
+[[debug.getstack.args]]
+type = "any"
+
+[[debug.setstack.args]]
+type = "any"
+
+[[debug.setstack.args]]
+type = "number"
+
+[[debug.setstack.args]]
+type = "table"
+
+[[debug.setmetatable.args]]
+type = "any" #technically?
+
+[[debug.setmetatable.args]]
+type = "table"
+
+[debug.getregistry]
+args = []
+
+[[debug.getinfo.args]]
+type = "any"
+
+[[debug.getinfo.args]]
+type = "string"
+required = "false"
+
+# No drawing library
+
+[[syn.cache_replace.args]]
+type = { display = "Instance" }
+
+[[syn.cache_replace.args]]
+type = { display = "Instance" }
+
+[[syn.cache_invalidate.args]]
+type = { display = "Instance" }
+
+[[syn.set_thread_identity.args]]
+type = "number"
+
+[syn.get_thread_identity]
+args = []
+
+[[syn.is_cached.args]]
+type = { display = "Instance" }
+
+[[syn.write_clipboard.args]]
+type = "string"
+
+[[syn.queue_on_teleport.args]]
+type = "string"
+
+[[syn.protect_gui.args]]
+type = { display = "Instance" }
+
+[[syn.unprotect_gui.args]]
+type = { display = "Instance" }
+
+[syn.is_beta]
+args = []
+
+[[syn.request.args]]
+type = "table"
+
+[[syn.secure_call.args]]
+type = "function"
+
+[[syn.secure_call.args]]
+type = "any" # IDK
+
+[[syn.secure_call.args]]
+type = "..."
+
+[[syn.run_secure_function.args]]
+type = "string"
+
+# Stuff that isn't in the docs
+[[is_synapse_function.args]]
+type = "function"
+
