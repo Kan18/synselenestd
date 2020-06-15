@@ -4,7 +4,7 @@
 How to use:
 
 - Create project which will use Selene
-- Copy over `synapse.toml` file to project folder (You can get a raw version from https://raw.githubusercontent.com/Kan18/synselenestd/master/synapse.toml )
+- Use `synapse.toml` file in project folder (You can get a raw version from https://raw.githubusercontent.com/Kan18/synselenestd/master/synapse.toml )
 - Create a `selene.toml` file in project folder with `std = "lua51+roblox+synapse"`
 - Create Roblox standard lib with `selene generate-roblox-std`
 - You can either manually use Selene through compiling it with Cargo, or install the VSC extension available [here](https://marketplace.visualstudio.com/items?itemName=Kampfkarren.selene-vscode)
